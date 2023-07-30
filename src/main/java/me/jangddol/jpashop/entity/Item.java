@@ -22,17 +22,17 @@ public class Item {
     private String itemNm;
 
     @Column(nullable = false)
-    private int price;
+    private int price;              // 가격
 
     @Column(name="stock_amount")
     private int stockNumber;        // 재고수량
 
     @Lob
-    private String itemDetail;
+    private String itemDetail;      // 상세설명
 
     @Enumerated(EnumType.STRING)
-    private ItemSellStatus status;
+    private ItemSellStatus itemSellStatus;  // 판매살태
 
     private LocalDateTime regTime;          // 등록시간
-    private LocalDateTime updateTime;
+    private LocalDateTime updateTime;       // 수정시간
 }
