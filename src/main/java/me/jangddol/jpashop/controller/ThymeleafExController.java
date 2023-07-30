@@ -29,4 +29,10 @@ public class ThymeleafExController {
         model.addAttribute("itemDto", itemDto);
         return "thymeleafEx/thymeEx02";
     }
+
+    @GetMapping(value="/ex07")
+    public String thymeleafExLayout(Model model) {
+
+        return "thymeleafEx/thymeEx07";
+    }
 }
