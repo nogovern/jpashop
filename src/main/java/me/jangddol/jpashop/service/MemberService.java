@@ -13,11 +13,13 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    // 회원 신규 저장
     public Member saveMember(Member member) {
-
+        validDuplicateMember(member);
         return memberRepository.save(member);
     }
 
+    // 가입된 회원인지 검증
     private void validDuplicateMember(Member member) {
         Member findMember = memberRepository.findByEmail(member.getEmail());
         if(findMember != null) {
