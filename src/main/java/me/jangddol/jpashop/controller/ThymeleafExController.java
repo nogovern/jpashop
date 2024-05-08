@@ -14,6 +14,13 @@ import java.util.List;
 @RequestMapping(value="thymeleaf")
 public class ThymeleafExController {
 
+    @GetMapping(value = "/")
+    public String thymeleafIndex(Model model) {
+
+        // home
+        return "redirect:/";
+    }
+
     @GetMapping(value="/ex01")
     public String thymeleafEx01(Model model) {
         model.addAttribute("data", "타임리프 예제입니다");
